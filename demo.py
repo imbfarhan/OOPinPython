@@ -19,8 +19,15 @@ class Student:
 
     #Class method Use a decorator
     @classmethod
-    def info(cls):
+    def getSchool(cls):
         return cls.school
+    
+    #Static method -> Has nothing to do with instance variable nor class variable
+    #Not concerned with variables
+    #Use decorator
+    @staticmethod
+    def info():
+        print("This is Student class")
 
 
 s1=Student(34,47,32)
@@ -29,4 +36,6 @@ s2=Student(89,32,12)
 print(s1.avg())
 print(s2.avg())
 
-print(Student.info())
+print(Student.getSchool())
+
+Student.info()
